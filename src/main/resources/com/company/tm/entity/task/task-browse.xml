@@ -40,6 +40,7 @@
         </filter>
         <groupTable id="tasksTable"
                     width="100%"
+                    multiselect="true"
                     dataContainer="tasksDc">
             <actions>
                 <action id="create" type="create"/>
@@ -59,7 +60,8 @@
                 <button id="createBtn" action="tasksTable.create"/>
                 <button id="editBtn" action="tasksTable.edit"/>
                 <button id="removeBtn" action="tasksTable.remove"/>
-                <button id="importBtn" caption="Import"/>
+
+                <button id="importBtn" caption="msg://import"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">

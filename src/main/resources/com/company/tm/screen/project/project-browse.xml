@@ -47,6 +47,7 @@
                 <column id="name"/>
                 <column id="description"/>
                 <column id="defaultProject"/>
+                <column id="defaultTaskPriority"/>
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"

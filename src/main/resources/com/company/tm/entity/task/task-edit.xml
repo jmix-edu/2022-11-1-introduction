@@ -13,6 +13,15 @@
             <loader/>
             <collection id="subtasksDc" property="subtasks"/>
         </instance>
+
+        <collection id="projectsDc" class="com.company.tm.entity.Project">
+            <fetchPlan extends="_base"/>
+            <loader id="projectsDl">
+                <query>
+                    <![CDATA[select e from tm_Project e order by e.name]]>
+                </query>
+            </loader>
+        </collection>
     </data>
     <facets>
         <dataLoadCoordinator auto="true"/>
@@ -41,12 +50,16 @@
                             <action id="entityClear" type="entity_clear"/>
                         </actions>
                     </entityPicker>
-                    <entityPicker id="projectField" property="project">
+
+
+                    <entityComboBox id="projectField" property="project" optionsContainer="projectsDc">
                         <actions>
                             <action id="entityLookup" type="entity_lookup"/>
                             <action id="entityClear" type="entity_clear"/>
                         </actions>
-                    </entityPicker>
+                    </entityComboBox>
+
+
                     <comboBox id="priorityField" property="priority"/>
                 </column>
             </form>
